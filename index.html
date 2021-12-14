@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wish list calculator</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="imgs/listicon.png">
+</head>
+<body>
+    <div class="overlay">
+        <div class="loader"></div>
+    </div>
+    <div class="tudo">
+        <header>
+            <div class="title">
+                <h1>Wish List</h1>
+            </div>
+        </header>
+        <main>
+            <p class='subtitle' id='subtitle'>Preencha sua wish list para obter resultados</p>
+            <ul id="listas">
+                <li>
+                    <input type="text" class="produto" id="produto" placeholder="Digite o produto aqui" maxlength="80"/>
+                    <label>R$</label>
+                    <input type="number" class="preço" placeholder="00,00" id="valor"/>
+                    <button type="submit" onclick="adicionarItem()" id="botãoItem">Adicionar item</button>
+                </li>
+            </ul>
+            <div class= "ov">
+                <ol id="results">
+                </ol>
+            </div>
+            <div class="dadosFinais">
+                <label class="upper" id="upper">Seu saldo disponível: R$</label>
+                <input type="number" id="saldo" class="saldo" placeholder="00,00"/><br>
+                <button type="submit" onclick="analisarDados()" id="botãoDados">Enviar itens para análise</button>
+            </div>
+            <div class="cálculos">
+                <ul id="cálculos">
+                </ul>
+            </div>
+        </main>
+    </div>
+</body>
+<script src="script.js"></script>
+<script src="sweetalert.js"></script>
+</html>
